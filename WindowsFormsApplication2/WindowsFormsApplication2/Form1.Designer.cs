@@ -69,7 +69,6 @@
             this.names_listbox.Size = new System.Drawing.Size(460, 165);
             this.names_listbox.TabIndex = 6;
             this.names_listbox.RowLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.names_listbox_RowLeave);
-            this.names_listbox.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.names_listbox_UserAddedRow);
             // 
             // _name
             // 

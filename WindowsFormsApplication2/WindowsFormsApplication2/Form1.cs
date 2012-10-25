@@ -22,44 +22,6 @@ namespace WindowsFormsApplication2
 
             
 		}
-        
-	/*	private void name_box_Leave(object sender, EventArgs e)
-		{
-			if (((TextBox)sender).Text == "")
-			{
-				((TextBox)sender).Text = "Name...";
-				((TextBox)sender).ForeColor = Color.Gray;
-			}
-		}
-     
-
-		private void only_numbers(object sender, KeyPressEventArgs e)
-		{
-			char character = e.KeyChar;
-			if (!(character >= '0' && character <= '9' || character == Convert.ToChar(Keys.Back)))
-			{
-				e.Handled = true;
-			}
-		}
-
-		private void age_box_Leave(object sender, EventArgs e)
-		{
-			if (((TextBox)sender).Text == "")
-			{
-				((TextBox)sender).Text = "Age...";
-				((TextBox)sender).ForeColor = Color.Gray;
-			}
-		}
-
-		private void division_box_Leave(object sender, EventArgs e)
-		{
-			if (((TextBox)sender).Text == "")
-			{
-				((TextBox)sender).Text = "Division...";
-				((TextBox)sender).ForeColor = Color.Gray;
-			}
-		}
-        */
 		private void button2_Click(object sender, EventArgs e)
 		{
             
@@ -141,23 +103,6 @@ namespace WindowsFormsApplication2
 			return labels;
 		}
 
-
-        private void names_listbox_UserAddedRow(object sender, DataGridViewRowEventArgs e)
-        {
-            
-            /*
-                //names_listbox.Columns[0].DataPropertyName = "Name";
-                //names_listbox.Columns[1].DataPropertyName = "Age";
-                //names_listbox.Columns[2].DataPropertyName = "Division";
-            string theName = e.Row.Cells[0].Value.ToString();
-               // string theName = names_listbox.;
-               // string theName = "bob"; 
-                Person p = new Person(theName, 2, 3);
-                people.Add(p);
-             */
-        
-        }
-
         private void personBindingSource_AddingNew(object sender, AddingNewEventArgs e)
         {
             
@@ -168,15 +113,15 @@ namespace WindowsFormsApplication2
             names_listbox.EndEdit();
             string theName = names_listbox.Rows[e.RowIndex].Cells[0].Value.ToString();
             int agge = Convert.ToInt32(names_listbox.Rows[e.RowIndex].Cells[1].Value.ToString());
-            
             int div = Convert.ToInt32(names_listbox.Rows[e.RowIndex].Cells[2].Value.ToString());
             string school = names_listbox.Rows[e.RowIndex].Cells[3].Value.ToString();
             //names_listbox.CurrentCell.Value.ToString();
             // string theName = names_listbox.;
             // string theName = "bob"; 
-            Person p = new Person(theName, agge, 3);
+            Person p = new Person(theName, agge, div);
             people.Add(p);
             names_listbox.BeginEdit(false);
+            i = 0;
         }
 
 

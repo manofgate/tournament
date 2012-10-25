@@ -4,8 +4,8 @@
  *              information necessary to sort person into a seed, and display 
  *              necessary information about person.
  *              
- * Author: Matthew P. Jordan
- * Date: 4-25-12
+ * Author: Ben Casey
+ * Date: 10/25/12
  * 
  */
 
